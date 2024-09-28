@@ -92,14 +92,6 @@ dataset<-merge(dataset, dtm_df, by = "id", all.x = TRUE) #merging with dataset.
 trial <- dataset[,-3]
 trial <- trial[,-1]
 
-#####################################################Select one
-#AIC: 568.94
-model <- glm(class ~ digits + length + up_ch + symbol_count + contiene_url + 
-               duplicated + can + free + call + `â£` + pls + babe + message + 
-               text + home + stop + like + new + good + got + one + sorry + 
-               cant + need + ill + way + come + ltgt + said + thats + thanx + 
-               lor + later + say + yup + fine, data = trial, family = binomial)
-
 
 #AIC: 599
 model <- glm(class ~ digits + length + up_ch + symbol_count + contiene_url + 
@@ -110,9 +102,6 @@ model <- glm(class ~ digits + length + up_ch + symbol_count + contiene_url +
                time + back + home + stop + youre + like + new + phone + 
                good + thank + know + cool + min + great + care + last + 
                make + night + week + done + love + will + `next` + se, data = trial, family = binomial)
-
-
-# step_model <-step(model.x)
 
 
 #### Model validation ####
@@ -148,7 +137,7 @@ print(confusion_matrix)
 cv_glm_trial <- cv.glm(trial, model,K=10)
 cv_glm_trial$delta
 
-#metrics
+#metrics train data
 
 accuracy = (confusion_matrix[2,2]+confusion_matrix[1,1]) / (confusion_matrix[2,2]+confusion_matrix[1,1]+confusion_matrix[1,2]+confusion_matrix[2,1]) 
 error_rate = 1 - accuracy
@@ -157,8 +146,9 @@ print(accuracy)
 print(error_rate)
 
 
+                 
 
-#### Test Feature Extraction ####
+#### Test set prediction ####
 datatest<-test
 
 
