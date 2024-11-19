@@ -11,8 +11,8 @@ The repository is composed as the following:
 
 This repo is developed by:
 
-[@ViPaolo] (https://github.com/ViPaolo/)
-[@Zero9667] (https://github.com/Zero9667)
+- [@ViPaolo] (https://github.com/ViPaolo/)
+- [@Zero9667] (https://github.com/Zero9667)
 
 
 
