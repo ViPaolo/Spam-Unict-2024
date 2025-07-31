@@ -13,6 +13,7 @@ This repo is developed by:
 
 - [@ViPaolo](https://github.com/ViPaolo/)
 - [@Zero9667](https://github.com/Zero9667)
+- [Emanuele Fiorito](https://www.linkedin.com/in/giuseppe-stefano-basile-b9208417b/)
 
 
 
